@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html',{
-    "title" : "Mainsasasa"
-})
-<body>
-    @@include('html/header.html',{})
-    <main>
-        <div>
-        <img width="400" src="@img/4@3x.png" alt="">
+  @@include('html/head.html',{ "title" : "Banner" })
+  <body>
+    <div class="banner">
+      <img
+        class="banner__background"
+        src="@img/4.png"
+        srcset="@img/4@2x.png 2x, @img/4@3x.png 3x"
+      />
+      <div class="banner__container">
+        @@include('html/header.html',{}) 
+        @@include('html/main.html',{})
+        @@include('html/footer.html',{})
+      </div>
     </div>
-        lsjdhkjshkjh
-        <span>sdshkdgsjhdgsahjgdhjsg</span>
-    </main>
-    @@include('html/footer.html',{})
     <script src="js/app.min.js"></script>
-</body>
+    <script>
+      const convertStyle = () => {
+        const height = window.innerHeight;
+        Array.from(document.getElementsByTagName("banner__background")).forEach(
+          (element) => {
+            element.style.height = `${height}px`;
+          }
+        );
+      };
+      window.addEventListener("resize", convertStyle);
+      window.addEventListener("DOMContentLoaded", convertStyle);
+    </script>
+  </body>
 </html>

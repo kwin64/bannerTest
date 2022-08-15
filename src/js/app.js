@@ -1,3 +1,5 @@
-import * as flsFunctions from './modules/functions.js'
+import * as flsFunctions from "./modules/functions.js";
+import en from "../store/en.json";
 
-flsFunctions.isWebp()
+flsFunctions.dataParseBody(en);
+flsFunctions.dataParseHeader(en);

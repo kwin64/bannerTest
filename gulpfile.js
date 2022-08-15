@@ -19,7 +19,6 @@ global.app = {
   plugins: plugins,
 };
 
-
 function watcher() {
   gulp.watch(path.watch.files, copy);
   gulp.watch(path.watch.html, html);
@@ -44,4 +43,3 @@ export { deployZip };
 // export { deployFTP };
 
 gulp.task("default", dev);
- 
