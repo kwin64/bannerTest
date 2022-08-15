@@ -1,0 +1,19 @@
+body{
+    /* background-color: black; */
+    background: url('@img/4.png') 0 0 no-repeat;
+}
+span{
+    color: yellowgreen;
+}
+
+@media  (max-width: 760px) {
+    body span {
+        font-size: 20px;
+    }
+}
+
+@media  (max-width: 760px) {
+    body  {
+        background-color: green;  
+    }
+}
