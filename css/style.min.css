@@ -1,4 +1,4 @@
-@import "../fonts/fonts.css";
+@import "../css/fonts.css";
 
 html {
   line-height: 1.15;
@@ -190,6 +190,8 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: SF;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 .banner {
   height: 100%;
@@ -580,6 +582,7 @@ body {
   opacity: 0.5;
   font-family: Roboto;
   font-weight: 400;
+  -webkit-overflow-scrolling: auto;
 }
 
 .banner-footer_links {
