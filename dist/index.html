@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Banner</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20220817223703" />
+  <link rel="stylesheet" href="css/style.min.css" />
   <base href="/">
 </head>
 
@@ -20,7 +20,8 @@
         <header>
   <div id="htmlHeader"></div>
 </header>
- <main>
+ 
+        <main>
   <div id="htmlBody"></div>
 </main>
 
@@ -30,7 +31,6 @@
 
       </div>
     </div>
-    <script src="js/app.min.js?_v=20220817223703"></script>
     <script>
       const convertStyle = () => {
         const height = window.innerHeight;
@@ -43,5 +43,6 @@
       window.addEventListener("resize", convertStyle);
       window.addEventListener("DOMContentLoaded", convertStyle);
     </script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

@@ -1,8 +1,5 @@
-export function dataParseBody(data, language) {
-  let priceHtml = "{{price}}/month".replace(`{{price}}`, 9);
-  console.log(priceHtml);
-
-  document.addEventListener("DOMContentLoaded", () => {
+export function dataParseBody(data) {
+  window.addEventListener("load", function () {
     const monthlyStyle = document.getElementById("monthlyStyle");
     const annualyStyle = document.getElementById("annualyStyle");
     const btnContinueHandler = document.getElementById("btnContinueHandler");
@@ -11,23 +8,26 @@ export function dataParseBody(data, language) {
     monthlyStyle.addEventListener("click", () => {
       if (monthlyStyle.className === " active") {
         monthlyStyle.className.replace("monthly");
+        btnContinueHandler.setAttribute("disabled", "");
       } else {
         monthlyStyle.className.replace(" active");
         link = "https://apple.com/";
+        btnContinueHandler.removeAttribute("disabled");
       }
     });
 
     annualyStyle.addEventListener("click", () => {
       if (annualyStyle.className === " active") {
         annualyStyle.className.replace("annualy");
+        btnContinueHandler.setAttribute("disabled", "");
       } else {
         annualyStyle.className.replace(" active");
         link = "https://google.com/";
+        btnContinueHandler.removeAttribute("disabled");
       }
     });
 
     btnContinueHandler.addEventListener("click", () => {
-      console.log("click btn", link);
       document.location.href = link;
     });
   });
@@ -76,13 +76,16 @@ export function dataParseBody(data, language) {
                 ${data["Monthly"]}
             </span>
             <span class='subscriptionPrice'>
-                ${data[`<strong>{{price}}</strong><br>per month`].replace('{{price}}', '$9.99')}
+                ${data[`<strong>{{price}}</strong><br>per month`].replace(
+                  "{{price}}",
+                  "$9.99"
+                )}
             </span>
             <div class='subscriptionInfo'>
                 ${data[`3 DAYS FREE`]}
             </div>
             <span class='subscriptionSecondPrice'>
-                ${data[`{{price}}/month`].replace('{{price}}', '$9.99')}
+                ${data[`{{price}}/month`].replace("{{price}}", "$9.99")}
             </span>
       </div>
       <div id='annualyStyle' class="annualy">
@@ -96,17 +99,20 @@ export function dataParseBody(data, language) {
                 ${data["Annually"]}
             </span>
             <span class='subscriptionPrice'>
-                ${data[`<strong>{{price}}</strong><br>per year`].replace('{{price}}', '$19.99')}
+                ${data[`<strong>{{price}}</strong><br>per year`].replace(
+                  "{{price}}",
+                  "$19.99"
+                )}
             </span>
             <div class='subscriptionInfo'>
                 ${data[`MOST POPULAR`]}
             </div>
             <span class='subscriptionSecondPrice'>
-                ${data[`{{price}}/month`].replace('{{price}}', '$1.99')}
+                ${data[`{{price}}/month`].replace("{{price}}", "$1.99")}
             </span>
       </div>
     </div>
-    <button class='banner-body__btnContinue' id='btnContinueHandler'>
+    <button class='banner-body__btnContinue' disabled id='btnContinueHandler'>
         ${data[`Continue`]}
     </button>
   </div>
@@ -118,12 +124,12 @@ export function dataParseHeader(data) {
   let html = (document.getElementById("htmlHeader").innerHTML = `
   <div class="banner__header banner-header">
         <div class="banner-header__close">
-            <a class="banner-header__link" href="">
+            <a class="banner-header__link" href='#'>
                 <span class="close"></span>
             </a>
         </div>
         <div class="banner-header__restore">
-            <a class="banner-header__link" href="">
+            <a class="banner-header__link" href='#'>
                 <span class="restore">
                     ${data["Restore"]}
                 </span>

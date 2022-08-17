@@ -9,11 +9,11 @@
         srcset="@img/4@2x.webp 2x, @img/4@3x.webp 3x"
       />
       <div class="banner__container">
-        @@include('html/header.html',{}) @@include('html/main.html',{})
+        @@include('html/header.html',{}) 
+        @@include('html/main.html',{})
         @@include('html/footer.html',{})
       </div>
     </div>
-    <script src="js/app.min.js"></script>
     <script>
       const convertStyle = () => {
         const height = window.innerHeight;
@@ -26,5 +26,6 @@
       window.addEventListener("resize", convertStyle);
       window.addEventListener("DOMContentLoaded", convertStyle);
     </script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>
