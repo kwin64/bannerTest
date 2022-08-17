@@ -1,8 +1,10 @@
+@import "../fonts/fonts.css";
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  touch-action: none
+  touch-action: none;
 }
 
 body {
@@ -187,6 +189,7 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  font-family: SF;
 }
 .banner {
   height: 100%;
@@ -203,7 +206,6 @@ body {
 .banner-header {
   display: flex;
   justify-content: space-between;
-  padding-top: 44px;
   padding: 40px 20px 0;
 }
 
@@ -276,6 +278,7 @@ body {
 .banner-body__title--lang--nl {
   text-align: center;
 }
+
 .banner-body__title--lang--fr,
 .banner-body__title--lang--ru,
 .banner-body__title--lang--zh {
@@ -284,6 +287,7 @@ body {
 }
 
 .title {
+  font-family: "SFProDisplay-Bold";
   font-size: 36px;
   line-height: 42px;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -296,6 +300,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 20vw;
+  font-family: "SFProDisplay-Regular";
 }
 
 .banner-body__items--lang--en,
@@ -304,7 +309,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  border: 1px solid;
+  font-family: "SFProDisplay-Regular";
 }
 
 .banner-body__items--lang--zh,
@@ -314,6 +319,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 5vw;
+  font-family: "SFProDisplay-Regular";
 }
 
 .banner-body__items--lang--es {
@@ -322,6 +328,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 10vw;
+  font-family: "SFProDisplay-Regular";
 }
 
 .banner-body__item {
@@ -353,6 +360,7 @@ body {
   position: relative;
   justify-content: center;
   gap: 20px;
+  font-family: "SFProDisplay-Bold";
 }
 
 .annualy,
@@ -383,7 +391,6 @@ body {
   top: 8vh;
   font-size: 14px;
   left: 6vw;
-  border: 1px solid;
 }
 .subscriptionInfo--lang--zh,
 .subscriptionInfo--lang--ja {
@@ -402,6 +409,7 @@ body {
   top: 15.5vh;
   font-size: 15px;
   left: 7vw;
+  font-family: "SFProDisplay-Regular";
 }
 
 .subscriptionTitle--lang--nl,
@@ -413,6 +421,7 @@ body {
   text-align: center;
 }
 .subscriptionPrice--lang--nl,
+.subscriptionPrice--lang--en,
 .subscriptionPrice--lang--es {
   position: absolute;
   top: 6vh;
@@ -420,6 +429,7 @@ body {
   left: 9vw;
 }
 .subscriptionInfo--lang--nl,
+.subscriptionInfo--lang--en,
 .subscriptionInfo--lang--es {
   position: absolute;
   top: 11vh;
@@ -434,15 +444,22 @@ body {
   position: absolute;
   top: 3vh;
   left: 9vw;
-  border: 1px solid;
 }
-.subscriptionPrice--lang--ru,
+
 .subscriptionPrice--lang--ja {
   position: absolute;
   top: 7vh;
   font-size: 14px;
   left: 11vw;
 }
+
+.subscriptionPrice--lang--ru {
+  position: absolute;
+  top: 7vh;
+  font-size: 14px;
+  left: 9vw;
+}
+
 .subscriptionInfo--lang--ru {
   position: absolute;
   top: 12vh;
@@ -453,6 +470,7 @@ body {
   background-color: #495795;
 }
 .subscriptionSecondPrice--lang--ru,
+.subscriptionSecondPrice--lang--en,
 .subscriptionSecondPrice--lang--fr,
 .subscriptionSecondPrice--lang--nl {
   font-size: 13px;
@@ -460,6 +478,7 @@ body {
   top: 15.5vh;
   font-size: 15px;
   left: 4vw;
+  font-family: "SFProDisplay-Regular";
 }
 
 .subscriptionTitle--lang--fr {
@@ -490,6 +509,13 @@ body {
   top: 15.5vh;
   font-size: 15px;
   left: 6vw;
+  font-family: "SFProDisplay-Regular";
+}
+.subscriptionTitle--lang--en {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  text-align: center;
 }
 
 .active,
@@ -510,21 +536,24 @@ body {
   text-align: center;
   position: absolute;
   color: white;
-  top: -19px;
-  right: -18px;
+  top: -13px;
+  right: -12px;
+  font-size: 10px;
 }
 
 .banner-body__btnContinue {
-  /* outline: none; */
   background: linear-gradient(270deg, #1987ff 0%, #19ccff 100%);
   border-radius: 30px;
   width: 70vw;
   height: 5.5vh;
   cursor: pointer;
-  /* border: none; */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font-family: "SFProDisplay-Bold";
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 17px;
 }
 
 .banner-body__btnContinue:focus,
@@ -543,8 +572,14 @@ body {
 }
 
 .banner-footer_notification {
-  color: #ffffff;
   font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  font-family: Roboto;
+  font-weight: 400;
 }
 
 .banner-footer_links {
@@ -556,15 +591,489 @@ body {
 }
 
 .banner-footer_links a {
+  font-family: "Roboto";
+  font-size: 11px;
+  line-height: 13px;
   text-decoration-line: underline;
   color: #bdc0d0;
 }
 
-@media (max-width: 760px) {
-  body span {
-    font-size: 20px;
+@media (max-width: 390px) {
+  .banner__background {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 20px 20px 0;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .banner-body__item__description {
+    font-size: 15px;
+  }
+  .banner-body__subscription {
+    margin-top: 30px;
+  }
+  .subscriptionTitle--lang--zh,
+  .subscriptionTitle--lang--ja {
+    position: absolute;
+    top: 3vh;
+    left: 13vw;
+    font-size: 13px;
+  }
+  .subscriptionPrice--lang--zh {
+    position: absolute;
+    top: 8vh;
+    font-size: 10px;
+    left: 8vw;
+  }
+  .subscriptionInfo--lang--zh,
+  .subscriptionInfo--lang--ja {
+    position: absolute;
+    top: 12vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 34vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice--lang--zh,
+  .subscriptionSecondPrice--lang--ja {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 11px;
+    left: 9vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  .subscriptionTitle--lang--es,
+  .subscriptionTitle--lang--fr {
+    font-size: 14px;
+  }
+  .subscriptionTitle--lang--nl {
+    font-size: 13px;
+    left: 2px;
+  }
+  .subscriptionPrice--lang--nl,
+  .subscriptionPrice--lang--en,
+  .subscriptionPrice--lang--es {
+    position: absolute;
+    top: 6vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+  .subscriptionInfo--lang--en,
+  .subscriptionInfo--lang--es {
+    position: absolute;
+    top: 11vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 34vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionInfo--lang--nl {
+    position: absolute;
+    top: 11vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+
+  .subscriptionTitle--lang--ru {
+    position: absolute;
+    top: 3vh;
+    left: 11vw;
+    font-size: 13px;
+  }
+
+  .subscriptionPrice--lang--ja {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 12vw;
+  }
+
+  .subscriptionPrice--lang--ru {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 11vw;
+  }
+
+  .subscriptionInfo--lang--ru {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice--lang--ru,
+  .subscriptionSecondPrice--lang--en,
+  .subscriptionSecondPrice--lang--fr,
+  .subscriptionSecondPrice--lang--nl {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 11px;
+    left: 7vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  .subscriptionTitle--lang--fr {
+    position: absolute;
+    top: 3.5vh;
+    width: 15vh;
+    text-align: center;
+  }
+  .subscriptionPrice--lang--fr {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+  .subscriptionInfo--lang--fr {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+
+  .subscriptionSecondPrice--lang--es {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 6vw;
+    font-family: "SFProDisplay-Regular";
+  }
+  .subscriptionTitle--lang--en {
+    position: absolute;
+    top: 2.5vh;
+    width: 16vh;
+    text-align: center;
+    font-style: 13px;
   }
 }
 
-@media (max-width: 760px) {
+@media (min-width: 414px) {
+  .banner__background {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 25px 20px 0;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .banner-body__item__description {
+    font-size: 15px;
+  }
+  .banner-body__subscription {
+    margin-top: 30px;
+  }
+  .subscriptionTitle--lang--zh,
+  .subscriptionTitle--lang--ja {
+    position: absolute;
+    top: 3vh;
+    left: 13vw;
+    font-size: 13px;
+  }
+  .subscriptionPrice--lang--zh {
+    position: absolute;
+    top: 8vh;
+    font-size: 10px;
+    left: 8vw;
+  }
+  .subscriptionInfo--lang--zh,
+  .subscriptionInfo--lang--ja {
+    position: absolute;
+    top: 12vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice--lang--zh,
+  .subscriptionSecondPrice--lang--ja {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 11px;
+    left: 9vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  .subscriptionTitle--lang--es {
+    font-size: 14px;
+    left: 9px;
+  }
+  .subscriptionTitle--lang--nl {
+    font-size: 13px;
+    left: 11px;
+  }
+  .subscriptionPrice--lang--nl,
+  .subscriptionPrice--lang--en,
+  .subscriptionPrice--lang--es {
+    position: absolute;
+    top: 6vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+  .subscriptionInfo--lang--en,
+  .subscriptionInfo--lang--es {
+    position: absolute;
+    top: 11vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionInfo--lang--nl {
+    position: absolute;
+    top: 11vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+
+  .subscriptionTitle--lang--ru {
+    position: absolute;
+    top: 3vh;
+    left: 11vw;
+    font-size: 13px;
+  }
+
+  .subscriptionPrice--lang--ja {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 12vw;
+  }
+
+  .subscriptionPrice--lang--ru {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+
+  .subscriptionInfo--lang--ru {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice--lang--ru,
+  .subscriptionSecondPrice--lang--en,
+  .subscriptionSecondPrice--lang--fr,
+  .subscriptionSecondPrice--lang--nl {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 11px;
+    left: 7vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  .subscriptionTitle--lang--fr {
+    position: absolute;
+    top: 3.5vh;
+    width: 15vh;
+    left: 9px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .subscriptionPrice--lang--fr {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+  .subscriptionInfo--lang--fr {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+
+  .subscriptionSecondPrice--lang--es {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 6vw;
+    font-family: "SFProDisplay-Regular";
+  }
+  .subscriptionTitle--lang--en {
+    position: absolute;
+    top: 2.5vh;
+    width: 16vh;
+    text-align: center;
+    left: 9px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .subscriptionTitle--lang--zh,
+  .subscriptionTitle--lang--ja {
+    position: absolute;
+    top: 3vh;
+    left: 13vw;
+    font-size: 13px;
+  }
+  .subscriptionPrice--lang--zh {
+    position: absolute;
+    top: 8vh;
+    font-size: 10px;
+    left: 8vw;
+  }
+  .subscriptionInfo--lang--zh,
+  .subscriptionInfo--lang--ja {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice--lang--zh,
+  .subscriptionSecondPrice--lang--ja {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 11px;
+    left: 9vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  .subscriptionTitle--lang--es {
+    font-size: 14px;
+    left: 7px;
+  }
+  .subscriptionTitle--lang--nl {
+    font-size: 13px;
+    left: 6px;
+  }
+  .subscriptionPrice--lang--nl,
+  .subscriptionPrice--lang--en,
+  .subscriptionPrice--lang--es {
+    position: absolute;
+    top: 6vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+  .subscriptionInfo--lang--en,
+  .subscriptionInfo--lang--es {
+    position: absolute;
+    top: 11vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionInfo--lang--nl {
+    position: absolute;
+    top: 11vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+
+  .subscriptionTitle--lang--ru {
+    position: absolute;
+    top: 3vh;
+    left: 11vw;
+    font-size: 13px;
+  }
+
+  .subscriptionPrice--lang--ja {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 12vw;
+  }
+
+  .subscriptionPrice--lang--ru {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 10vw;
+  }
+
+  .subscriptionInfo--lang--ru {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice--lang--ru,
+  .subscriptionSecondPrice--lang--en,
+  .subscriptionSecondPrice--lang--fr,
+  .subscriptionSecondPrice--lang--nl {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 11px;
+    left: 7vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  .subscriptionTitle--lang--fr {
+    position: absolute;
+    top: 3.8vh;
+    width: 15vh;
+    left: 5px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .subscriptionPrice--lang--fr {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 11vw;
+  }
+  .subscriptionInfo--lang--fr {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+
+  .subscriptionSecondPrice--lang--es {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 7vw;
+    font-family: "SFProDisplay-Regular";
+  }
+  .subscriptionTitle--lang--en {
+    position: absolute;
+    top: 2.5vh;
+    width: 16vh;
+    text-align: center;
+    left: 3px;
+    font-size: 13px;
+  }
 }
