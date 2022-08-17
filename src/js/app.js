@@ -1,4 +1,4 @@
-import * as flsFunctions from "./modules/functions.js";
+import * as flsFunctions from "./modules/html.js";
 import loadLang from "./modules/loadLang.js";
 
 let systemLanguage = window.navigator.language;
@@ -28,7 +28,7 @@ if (!langs.includes(lang)) {
 }
 
 loadLang(lang).then((data) => {
-  flsFunctions.dataParseBody(data, lang);
-  flsFunctions.dataParseHeader(data, lang);
-  flsFunctions.dataParseFooter(data, lang);
+  flsFunctions.dataParseBody(data);
+  flsFunctions.dataParseHeader(data);
+  flsFunctions.dataParseFooter(data);
 });
