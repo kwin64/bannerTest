@@ -1,4 +1,4 @@
-export function dataParseBody(data, language = "es") {
+export function dataParseBody(data, language = "zh") {
   let priceHtml = "{{price}}/month".replace(`{{price}}`, 9);
   console.log(priceHtml);
 

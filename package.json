@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://kwin64.github.io/bannerTest",
   "scripts": {
     "dev": "yarn gulp",
     "build": "yarn gulp build --build",
-    "zip": "gulp deployZip --build",
-    "deploy": "gulp deployFTP --build"
+    "deploy": "gh-pages -d dist"
   },
   "license": "MIT",
   "dependencies": {
@@ -18,6 +18,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "del": "^7.0.0",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
