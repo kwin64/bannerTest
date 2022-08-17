@@ -601,6 +601,45 @@ body {
   color: #bdc0d0;
 }
 
+html[lang="en"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="es"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="fr"] .banner-body__title {
+  text-align: center;
+  padding: 0 2vw;
+}
+html[lang="fr"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20vw;
+  font-family: "SFProDisplay-Regular";
+}
+
+html[lang="ja"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="nl"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="ru"] .banner-body__title {
+  text-align: center;
+  padding: 0 2vw;
+}
+
+html[lang="zh"] .banner-body__title {
+  text-align: center;
+  padding: 0 2vw;
+}
+
 @media (max-width: 390px) {
   .banner__background {
     height: 100%;
