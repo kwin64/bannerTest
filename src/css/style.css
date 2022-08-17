@@ -1,5 +1,4 @@
-@import "fonts";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+@import "fonts.css";
 
 html {
   line-height: 1.15;
@@ -190,7 +189,9 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  font-family: "SFProText-Regular";
+  font-family: SF;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 .banner {
   height: 100%;
@@ -579,7 +580,9 @@ body {
   color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.5;
-  font-family: "Roboto-Regular";
+  font-family: Roboto;
+  font-weight: 400;
+  -webkit-overflow-scrolling: auto;
 }
 
 .banner-footer_links {
@@ -596,6 +599,45 @@ body {
   line-height: 13px;
   text-decoration-line: underline;
   color: #bdc0d0;
+}
+
+html[lang="en"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="es"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="fr"] .banner-body__title {
+  text-align: center;
+  padding: 0 2vw;
+}
+html[lang="fr"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20vw;
+  font-family: "SFProDisplay-Regular";
+}
+
+html[lang="ja"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="nl"] .banner-body__title {
+  text-align: center;
+}
+
+html[lang="ru"] .banner-body__title {
+  text-align: center;
+  padding: 0 2vw;
+}
+
+html[lang="zh"] .banner-body__title {
+  text-align: center;
+  padding: 0 2vw;
 }
 
 @media (max-width: 390px) {
@@ -926,9 +968,6 @@ body {
     font-size: 13px;
   }
 }
-
-
-
 
 @media (max-width: 375px) {
   .subscriptionTitle--lang--zh,
