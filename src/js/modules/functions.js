@@ -1,4 +1,4 @@
-export function dataParseBody(data, language = "zh") {
+export function dataParseBody(data, language) {
   let priceHtml = "{{price}}/month".replace(`{{price}}`, 9);
   console.log(priceHtml);
 
@@ -35,12 +35,12 @@ export function dataParseBody(data, language = "zh") {
   let html = (document.getElementById("htmlBody").innerHTML = `
     <div class="banner__body banner-body">
         <div class="banner-body__content">
-            <div class="banner-body__title--lang--${language}">
+            <div class="banner-body__title">
                 <span class="title">
                     ${data["Unlimited Access<br>to All Features"]}
                 </span>
             </div>
-            <div class="banner-body__items--lang--${language}">
+            <div class="banner-body__items">
                 <div class="banner-body__item">
                     <img
                         class="banner-body__item__img"
@@ -76,7 +76,7 @@ export function dataParseBody(data, language = "zh") {
                 ${data["Monthly"]}
             </span>
             <span class='subscriptionPrice--lang--${language}'>
-                ${data[`<strong>{{price}}</strong><br>per month`]}
+                ${data[`<strong>{{price}}</strong><br>per month`].replace('{{price}}', 100)}
             </span>
             <div class='subscriptionInfo--lang--${language}'>
                 ${data[`3 DAYS FREE`]}

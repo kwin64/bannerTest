@@ -1,13 +1,26 @@
 import * as flsFunctions from "./modules/functions.js";
-import zh from "../store/zh.json";
 import loadLang from "./modules/loadLang.js";
 
-let language = window.navigator ? window.navigator.language : "ru";
-language = language.slice(0, 2).toLowerCase();
+let systemLanguage = window.navigator.language;
+systemLanguage = systemLanguage.slice(0, 2).toLowerCase();
 
-const data = loadLang(language);
-console.log(data);
+const query = window.location.search.slice(1);
+let queryParams = new URLSearchParams(query)
 
-flsFunctions.dataParseBody(zh);
-flsFunctions.dataParseHeader(zh);
-flsFunctions.dataParseFooter(zh);
+let lang = 'en'
+if (queryParams.has('lang')) {
+    lang = queryParams.get('lang');
+}
+else {
+    lang = systemLanguage;
+    queryParams.set('lang', lang)
+    history.pushState(null, '', `${window.location.pathname}?${queryParams.toString()}`)
+}
+
+document.documentElement.setAttribute('lang', lang);
+
+loadLang(lang).then((data) => {
+  flsFunctions.dataParseBody(data, lang);
+  flsFunctions.dataParseHeader(data, lang);
+  flsFunctions.dataParseFooter(data, lang);
+});

@@ -1,30 +1,31 @@
 import fs from "fs";
-import fonter from "gulp-fonter";
+import path from "path";
+import fonter from "gulp-fonter-unx";
 import ttf2woff2 from "gulp-ttf2woff2";
 
 export const otfToTtf = () => {
   return app.gulp
-    .src(`${app.path.scrFolder}/fonts/*.otf`, {})
+    .src(`${app.path.srcFolder}/fonts/*.otf`, {})
     .pipe(
       fonter({
         formats: ["ttf"],
       })
     )
-    .pipe(app.gulp.dest(`${app.path.scrFolder}/fonts/`));
+    .pipe(app.gulp.dest(path.resolve(app.path.srcFolder, "fonts")));
 };
 
 export const ttfToWoff = () => {
   return app.gulp
-    .src(`${app.path.scrFolder}/fonts/*.tff`, {})
+    .src(`${app.path.srcFolder}/fonts/*.tff`, {})
     .pipe(
       fonter({
         formats: ["woff"],
       })
     )
-    .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-    .pipe(app.gulp.src(`${app.path.scrFolder}/fonts/*.ttf`))
+    .pipe(app.gulp.dest(app.path.build.fonts))
+    .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
     .pipe(ttf2woff2())
-    .pipe(app.gulp.dest(`${app.path.build.fonts}`));
+    .pipe(app.gulp.dest(app.path.build.fonts));
 };
 
 export const fontsStyle = () => {
