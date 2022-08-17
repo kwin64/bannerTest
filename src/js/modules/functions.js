@@ -72,17 +72,17 @@ export function dataParseBody(data, language) {
             <div class="subscriptionImg">
                 <img src="img/shape-1.svg" alt="" />
             </div>
-            <span class='subscriptionTitle--lang--${language}'>
+            <span class='subscriptionTitle'>
                 ${data["Monthly"]}
             </span>
-            <span class='subscriptionPrice--lang--${language}'>
-                ${data[`<strong>{{price}}</strong><br>per month`].replace('{{price}}', 100)}
+            <span class='subscriptionPrice'>
+                ${data[`<strong>{{price}}</strong><br>per month`].replace('{{price}}', '$9.99')}
             </span>
-            <div class='subscriptionInfo--lang--${language}'>
+            <div class='subscriptionInfo'>
                 ${data[`3 DAYS FREE`]}
             </div>
-            <span class='subscriptionSecondPrice--lang--${language}'>
-                ${data[`{{price}}/month`]}
+            <span class='subscriptionSecondPrice'>
+                ${data[`{{price}}/month`].replace('{{price}}', '$9.99')}
             </span>
       </div>
       <div id='annualyStyle' class="annualy">
@@ -92,17 +92,17 @@ export function dataParseBody(data, language) {
             <div class="discount">
                 ${data["-83%"]}
             </div>
-            <span class='subscriptionTitle--lang--${language}'>
+            <span class='subscriptionTitle'>
                 ${data["Annually"]}
             </span>
-            <span class='subscriptionPrice--lang--${language}'>
-                ${data[`<strong>{{price}}</strong><br>per year`]}
+            <span class='subscriptionPrice'>
+                ${data[`<strong>{{price}}</strong><br>per year`].replace('{{price}}', '$19.99')}
             </span>
-            <div class='subscriptionInfo--lang--${language}'>
+            <div class='subscriptionInfo'>
                 ${data[`MOST POPULAR`]}
             </div>
-            <span class='subscriptionSecondPrice--lang--${language}'>
-                ${data[`{{price}}/month`]}
+            <span class='subscriptionSecondPrice'>
+                ${data[`{{price}}/month`].replace('{{price}}', '$1.99')}
             </span>
       </div>
     </div>

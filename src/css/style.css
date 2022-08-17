@@ -1,15 +1,14 @@
-@import "fonts.css";
+@import "./fonts.css";
 
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  touch-action: none;
 }
 
 body {
   margin: 0;
-  background-color: #303d7a;
+  background-color: #232423;
 }
 
 main {
@@ -184,14 +183,11 @@ template {
 }
 
 body {
+  position: absolute;
   padding: 0;
   margin: 0;
-  overflow: hidden;
   width: 100vw;
-  height: 100vh;
-  font-family: SF;
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
+  font-family: SF-Pro-Text;
 }
 .banner {
   height: 100%;
@@ -200,9 +196,14 @@ body {
 
 .banner__background {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   z-index: -1;
+  position: fixed;
+  top: -70px;
+  padding-bottom: 70px;
+  transform: translateY(70px);
 }
 
 .banner-header {
@@ -274,65 +275,16 @@ body {
   justify-content: center;
 }
 
-.banner-body__title--lang--en,
-.banner-body__title--lang--es,
-.banner-body__title--lang--ja,
-.banner-body__title--lang--nl {
-  text-align: center;
-}
-
-.banner-body__title--lang--fr,
-.banner-body__title--lang--ru,
-.banner-body__title--lang--zh {
-  text-align: center;
-  padding: 0 2vw;
-}
-
 .title {
-  font-family: "SFProDisplay-Bold";
-  font-size: 36px;
-  line-height: 42px;
+  font-family: SF-Pro-Display-Bold;
+  font-weight: 700;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.banner-body__items--lang--fr,
-.banner-body__items--lang--ru {
-  margin-top: 25px;
+.banner-body__items {
+  margin-top: 30px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 20vw;
-  font-family: "SFProDisplay-Regular";
 }
-
-.banner-body__items--lang--en,
-.banner-body__items--lang--ja {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  font-family: "SFProDisplay-Regular";
-}
-
-.banner-body__items--lang--zh,
-.banner-body__items--lang--nl {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 5vw;
-  font-family: "SFProDisplay-Regular";
-}
-
-.banner-body__items--lang--es {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 10vw;
-  font-family: "SFProDisplay-Regular";
-}
-
 .banner-body__item {
   display: flex;
   align-items: center;
@@ -362,7 +314,7 @@ body {
   position: relative;
   justify-content: center;
   gap: 20px;
-  font-family: "SFProDisplay-Bold";
+  font-family: SF-Pro-Display-Bold;
 }
 
 .annualy,
@@ -380,144 +332,6 @@ body {
 .subscriptionImg img {
   width: 100%;
   height: 100%;
-}
-
-.subscriptionTitle--lang--zh,
-.subscriptionTitle--lang--ja {
-  position: absolute;
-  top: 3vh;
-  left: 11vw;
-}
-.subscriptionPrice--lang--zh {
-  position: absolute;
-  top: 8vh;
-  font-size: 14px;
-  left: 6vw;
-}
-.subscriptionInfo--lang--zh,
-.subscriptionInfo--lang--ja {
-  position: absolute;
-  top: 12vh;
-  font-size: 15px;
-  left: -0.3vw;
-  width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-.subscriptionSecondPrice--lang--zh,
-.subscriptionSecondPrice--lang--ja {
-  font-size: 13px;
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  left: 7vw;
-  font-family: "SFProDisplay-Regular";
-}
-
-.subscriptionTitle--lang--nl,
-.subscriptionTitle--lang--es,
-.subscriptionTitle--lang--fr {
-  position: absolute;
-  top: 2vh;
-  width: 15vh;
-  text-align: center;
-}
-.subscriptionPrice--lang--nl,
-.subscriptionPrice--lang--en,
-.subscriptionPrice--lang--es {
-  position: absolute;
-  top: 6vh;
-  font-size: 14px;
-  left: 9vw;
-}
-.subscriptionInfo--lang--nl,
-.subscriptionInfo--lang--en,
-.subscriptionInfo--lang--es {
-  position: absolute;
-  top: 11vh;
-  font-size: 15px;
-  left: -0.3vw;
-  width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-
-.subscriptionTitle--lang--ru {
-  position: absolute;
-  top: 3vh;
-  left: 9vw;
-}
-
-.subscriptionPrice--lang--ja {
-  position: absolute;
-  top: 7vh;
-  font-size: 14px;
-  left: 11vw;
-}
-
-.subscriptionPrice--lang--ru {
-  position: absolute;
-  top: 7vh;
-  font-size: 14px;
-  left: 9vw;
-}
-
-.subscriptionInfo--lang--ru {
-  position: absolute;
-  top: 12vh;
-  font-size: 13px;
-  left: -0.3vw;
-  width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-.subscriptionSecondPrice--lang--ru,
-.subscriptionSecondPrice--lang--en,
-.subscriptionSecondPrice--lang--fr,
-.subscriptionSecondPrice--lang--nl {
-  font-size: 13px;
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  left: 4vw;
-  font-family: "SFProDisplay-Regular";
-}
-
-.subscriptionTitle--lang--fr {
-  position: absolute;
-  top: 3.5vh;
-  width: 15vh;
-  text-align: center;
-}
-.subscriptionPrice--lang--fr {
-  position: absolute;
-  top: 7vh;
-  font-size: 14px;
-  left: 10vw;
-}
-.subscriptionInfo--lang--fr {
-  position: absolute;
-  top: 12vh;
-  font-size: 13px;
-  left: -0.3vw;
-  width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-
-.subscriptionSecondPrice--lang--es {
-  font-size: 13px;
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  left: 6vw;
-  font-family: "SFProDisplay-Regular";
-}
-.subscriptionTitle--lang--en {
-  position: absolute;
-  top: 2.5vh;
-  width: 16vh;
-  text-align: center;
 }
 
 .active,
@@ -552,7 +366,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: "SFProDisplay-Bold";
+  font-family: SF-Pro-Display-Bold;
   color: #ffffff;
   font-size: 17px;
   line-height: 17px;
@@ -578,11 +392,9 @@ body {
   line-height: 13px;
   text-align: center;
   color: #ffffff;
-  mix-blend-mode: normal;
   opacity: 0.5;
   font-family: Roboto;
   font-weight: 400;
-  -webkit-overflow-scrolling: auto;
 }
 
 .banner-footer_links {
@@ -594,7 +406,7 @@ body {
 }
 
 .banner-footer_links a {
-  font-family: "Roboto";
+  font-family: Roboto;
   font-size: 11px;
   line-height: 13px;
   text-decoration-line: underline;
@@ -604,9 +416,83 @@ body {
 html[lang="en"] .banner-body__title {
   text-align: center;
 }
+html[lang="en"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="en"] .subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  text-align: center;
+}
+html[lang="en"] .subscriptionPrice {
+  position: absolute;
+  top: 6vh;
+  font-size: 14px;
+  left: 9vw;
+}
+html[lang="en"] .subscriptionInfo {
+  position: absolute;
+  top: 11vh;
+  font-size: 15px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="en"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 15px;
+  left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
 
 html[lang="es"] .banner-body__title {
   text-align: center;
+}
+html[lang="es"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="es"] .subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  text-align: center;
+}
+html[lang="es"] .subscriptionPrice {
+  position: absolute;
+  top: 6vh;
+  font-size: 14px;
+  left: 11vw;
+}
+html[lang="es"] .subscriptionInfo {
+  position: absolute;
+  top: 11vh;
+  font-size: 15px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="es"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 15px;
+  left: 8vw;
+  font-family: SF-Pro-Display-Regular;
 }
 
 html[lang="fr"] .banner-body__title {
@@ -619,28 +505,735 @@ html[lang="fr"] .banner-body__items {
   display: flex;
   flex-direction: column;
   padding-left: 20vw;
-  font-family: "SFProDisplay-Regular";
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="fr"] .subscriptionTitle {
+  position: absolute;
+  top: 3.5vh;
+  width: 16vh;
+  font-size: 13px;
+  text-align: center;
+}
+html[lang="fr"] .subscriptionPrice {
+  position: absolute;
+  top: 7vh;
+  font-size: 13px;
+  left: 11vw;
+}
+html[lang="fr"] .subscriptionInfo {
+  position: absolute;
+  top: 12vh;
+  font-size: 12px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="fr"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 13px;
+  left: 8vw;
+  font-family: SF-Pro-Display-Regular;
 }
 
 html[lang="ja"] .banner-body__title {
   text-align: center;
 }
+html[lang="ja"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="ja"] .subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  left: 13vw;
+  font-size: 15px;
+}
+html[lang="ja"] .subscriptionPrice {
+  position: absolute;
+  top: 7vh;
+  font-size: 14px;
+  left: 11vw;
+  text-align: center;
+}
+html[lang="ja"] .subscriptionInfo {
+  position: absolute;
+  top: 12vh;
+  font-size: 12px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="ja"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 13px;
+  left: 9vw;
+  font-family: SF-Pro-Display-Regular;
+}
 
 html[lang="nl"] .banner-body__title {
   text-align: center;
+}
+html[lang="nl"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="nl"] .subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  text-align: center;
+}
+html[lang="nl"] .subscriptionPrice {
+  position: absolute;
+  top: 6vh;
+  font-size: 14px;
+  left: 9vw;
+  text-align: center;
+}
+html[lang="nl"] .subscriptionInfo {
+  position: absolute;
+  top: 11vh;
+  font-size: 13px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="nl"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 15px;
+  left: 6vw;
+  font-family: SF-Pro-Display-Regular;
 }
 
 html[lang="ru"] .banner-body__title {
   text-align: center;
   padding: 0 2vw;
 }
+html[lang="ru"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15vw;
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="ru"] .subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  text-align: center;
+}
+html[lang="ru"] .subscriptionPrice {
+  position: absolute;
+  top: 6vh;
+  font-size: 14px;
+  left: 10vw;
+  text-align: center;
+}
+html[lang="ru"] .subscriptionInfo {
+  position: absolute;
+  top: 12vh;
+  font-size: 12px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="ru"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 15px;
+  left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
 
 html[lang="zh"] .banner-body__title {
   text-align: center;
   padding: 0 2vw;
 }
+html[lang="zh"] .banner-body__items {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6vw;
+  font-family: SF-Pro-Display-Regular;
+}
+html[lang="zh"] .subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  width: 16vh;
+  text-align: center;
+}
+html[lang="zh"] .subscriptionPrice {
+  position: absolute;
+  top: 6vh;
+  font-size: 14px;
+  left: 8vw;
+  text-align: center;
+}
+html[lang="zh"] .subscriptionInfo {
+  position: absolute;
+  top: 11vh;
+  font-size: 12px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+html[lang="zh"] .subscriptionSecondPrice {
+  font-size: 13px;
+  position: absolute;
+  top: 15.5vh;
+  font-size: 15px;
+  left: 10vw;
+  font-family: SF-Pro-Display-Regular;
+}
 
-@media (max-width: 390px) {
+@media (min-width: 412px) {
+  .banner__background {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 20px 20px 0;
+  }
+  .banner-body {
+    margin-top: 120px;
+  }
+  .banner-body__items {
+    padding-left: 15vw;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .banner-body__item__description {
+    font-size: 15px;
+  }
+  .banner-body__subscription {
+    margin-top: 30px;
+  }
+  .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 16vh;
+    left: 2vw;
+    font-size: 14px;
+    text-align: center;
+  }
+  .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 13px;
+    left: 11vw;
+  }
+  .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 8vw;
+  }
+
+  html[lang="en"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 16vh;
+    left: 2vw;
+    font-size: 14px;
+    text-align: center;
+  }
+  html[lang="en"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 13px;
+    left: 11vw;
+  }
+  html[lang="en"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 13px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="en"] .subscriptionSecondPrice {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 8vw;
+  }
+
+  html[lang="es"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="es"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 12px;
+    left: 11vw;
+  }
+  html[lang="es"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 12px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="es"] .subscriptionSecondPrice {
+    font-size: 13px;
+    position: absolute;
+    top: 16.5vh;
+    font-size: 13px;
+    left: 9vw;
+  }
+
+  html[lang="fr"] .subscriptionTitle {
+    position: absolute;
+    top: 3.5vh;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+  html[lang="fr"] .subscriptionPrice {
+    position: absolute;
+    top: 8vh;
+    font-size: 11px;
+    left: 11vw;
+  }
+  html[lang="fr"] .subscriptionInfo {
+    position: absolute;
+    top: 13vh;
+    font-size: 10px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="fr"] .subscriptionSecondPrice {
+    font-size: 10px;
+    position: absolute;
+    top: 16.5vh;
+    font-size: 13px;
+    left: 8vw;
+  }
+
+  html[lang="ja"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 16vh;
+    left: 13vw;
+    font-size: 13px;
+  }
+  html[lang="ja"] .subscriptionPrice {
+    position: absolute;
+    top: 6.5vh;
+    font-size: 12px;
+    left: 11vw;
+    text-align: center;
+  }
+  html[lang="ja"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 12px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="ja"] .subscriptionSecondPrice {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 13px;
+    left: 9vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  html[lang="nl"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  html[lang="nl"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 11px;
+    left: 0vw;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="nl"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="nl"] .subscriptionSecondPrice {
+    font-size: 13px;
+    position: absolute;
+    top: 15.5vh;
+    left: 6vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  html[lang="ru"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="ru"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 14px;
+    left: 10.5vw;
+    text-align: center;
+  }
+  html[lang="ru"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="ru"] .subscriptionSecondPrice {
+    font-size: 13px;
+    position: absolute;
+    top: 15.5vh;
+    left: 7vw;
+    font-family: "SFProDisplay-Regular";
+  }
+
+  html[lang="zh"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="zh"] .subscriptionPrice {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+  }
+  html[lang="zh"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 12px;
+    left: -0.3vw;
+    width: 32vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="zh"] .subscriptionSecondPrice {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 10vw;
+    font-family: "SFProDisplay-Regular";
+  }
+}
+
+@media (max-width: 375px) {
+  .banner__background {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 20px 20px 0;
+  }
+  .banner-body {
+    margin-top: 90px;
+  }
+  .title {
+    line-height: 20px;
+    font-size: 25px;
+  }
+  .banner-body__item__description {
+    font-size: 15px;
+  }
+  .banner-body__subscription {
+    margin-top: 30px;
+  }
+
+  .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+  .subscriptionPrice {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 12vw;
+  }
+  .subscriptionInfo {
+    position: absolute;
+    top: 13vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  .subscriptionSecondPrice {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 11px;
+    left: 10vw;
+  }
+
+  html[lang="en"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+  html[lang="en"] .subscriptionPrice {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    left: 12vw;
+  }
+  html[lang="en"] .subscriptionInfo {
+    position: absolute;
+    top: 13vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="en"] .subscriptionSecondPrice {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 11px;
+    left: 10vw;
+  }
+
+  html[lang="es"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="es"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 12px;
+    left: 13vw;
+  }
+  html[lang="es"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="es"] .subscriptionSecondPrice {
+    font-size: 13px;
+    position: absolute;
+    top: 16.5vh;
+    font-size: 13px;
+    left: 11vw;
+  }
+
+  html[lang="fr"] .subscriptionTitle {
+    position: absolute;
+    top: 4.5vh;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+  }
+  html[lang="fr"] .subscriptionPrice {
+    position: absolute;
+    top: 8vh;
+    font-size: 11px;
+    left: 13vw;
+  }
+  html[lang="fr"] .subscriptionInfo {
+    position: absolute;
+    top: 13vh;
+    font-size: 10px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="fr"] .subscriptionSecondPrice {
+    font-size: 10px;
+    position: absolute;
+    top: 16.5vh;
+    font-size: 13px;
+    left: 10vw;
+  }
+
+  html[lang="ja"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    left: 13vw;
+    font-size: 13px;
+  }
+  html[lang="ja"] .subscriptionPrice {
+    position: absolute;
+    top: 6.5vh;
+    font-size: 12px;
+    left: 11vw;
+    text-align: center;
+  }
+  html[lang="ja"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 12px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="ja"] .subscriptionSecondPrice {
+    position: absolute;
+    top: 16.5vh;
+    font-size: 13px;
+    left: 9vw;
+  }
+
+  html[lang="nl"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+  }
+  html[lang="nl"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 11px;
+    left: 10vw;
+    text-align: center;
+  }
+  html[lang="nl"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="nl"] .subscriptionSecondPrice {
+    font-size: 13px;
+    position: absolute;
+    top: 15.5vh;
+    left: 6vw;
+  }
+
+  html[lang="ru"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="ru"] .subscriptionPrice {
+    position: absolute;
+    top: 6vh;
+    font-size: 12px;
+    left: 10.5vw;
+    text-align: center;
+  }
+  html[lang="ru"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 11px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="ru"] .subscriptionSecondPrice {
+    font-size: 13px;
+    position: absolute;
+    top: 15.5vh;
+    left: 7vw;
+  }
+
+  html[lang="zh"] .subscriptionTitle {
+    position: absolute;
+    top: 2.5vh;
+    width: 100%;
+    text-align: center;
+  }
+  html[lang="zh"] .subscriptionPrice {
+    position: absolute;
+    top: 7vh;
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+  }
+  html[lang="zh"] .subscriptionInfo {
+    position: absolute;
+    top: 12vh;
+    font-size: 12px;
+    left: -0.3vw;
+    width: 35vw;
+    text-align: center;
+    background-color: #495795;
+  }
+  html[lang="zh"] .subscriptionSecondPrice {
+    position: absolute;
+    top: 15.5vh;
+    font-size: 13px;
+    left: 10vw;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 390px) {
   .banner__background {
     height: 100%;
   }
@@ -650,168 +1243,8 @@ html[lang="zh"] .banner-body__title {
   .title {
     font-size: 30px;
   }
-  .banner-body__item__description {
-    font-size: 15px;
-  }
-  .banner-body__subscription {
-    margin-top: 30px;
-  }
-  .subscriptionTitle--lang--zh,
-  .subscriptionTitle--lang--ja {
-    position: absolute;
-    top: 3vh;
-    left: 13vw;
-    font-size: 13px;
-  }
-  .subscriptionPrice--lang--zh {
-    position: absolute;
-    top: 8vh;
-    font-size: 10px;
-    left: 8vw;
-  }
-  .subscriptionInfo--lang--zh,
-  .subscriptionInfo--lang--ja {
-    position: absolute;
-    top: 12vh;
-    font-size: 13px;
-    left: -0.3vw;
-    width: 34vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionSecondPrice--lang--zh,
-  .subscriptionSecondPrice--lang--ja {
-    position: absolute;
-    top: 15.5vh;
-    font-size: 11px;
-    left: 9vw;
-    font-family: "SFProDisplay-Regular";
-  }
-
-  .subscriptionTitle--lang--es,
-  .subscriptionTitle--lang--fr {
-    font-size: 14px;
-  }
-  .subscriptionTitle--lang--nl {
-    font-size: 13px;
-    left: 2px;
-  }
-  .subscriptionPrice--lang--nl,
-  .subscriptionPrice--lang--en,
-  .subscriptionPrice--lang--es {
-    position: absolute;
-    top: 6vh;
-    font-size: 12px;
-    left: 10vw;
-  }
-  .subscriptionInfo--lang--en,
-  .subscriptionInfo--lang--es {
-    position: absolute;
-    top: 11vh;
-    font-size: 13px;
-    left: -0.3vw;
-    width: 34vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionInfo--lang--nl {
-    position: absolute;
-    top: 11vh;
-    font-size: 13px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-
-  .subscriptionTitle--lang--ru {
-    position: absolute;
-    top: 3vh;
-    left: 11vw;
-    font-size: 13px;
-  }
-
-  .subscriptionPrice--lang--ja {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 12vw;
-  }
-
-  .subscriptionPrice--lang--ru {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 11vw;
-  }
-
-  .subscriptionInfo--lang--ru {
-    position: absolute;
-    top: 12vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionSecondPrice--lang--ru,
-  .subscriptionSecondPrice--lang--en,
-  .subscriptionSecondPrice--lang--fr,
-  .subscriptionSecondPrice--lang--nl {
-    position: absolute;
-    top: 16.5vh;
-    font-size: 11px;
-    left: 7vw;
-    font-family: "SFProDisplay-Regular";
-  }
-
-  .subscriptionTitle--lang--fr {
-    position: absolute;
-    top: 3.5vh;
-    width: 15vh;
-    text-align: center;
-  }
-  .subscriptionPrice--lang--fr {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 10vw;
-  }
-  .subscriptionInfo--lang--fr {
-    position: absolute;
-    top: 12vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-
-  .subscriptionSecondPrice--lang--es {
-    position: absolute;
-    top: 15.5vh;
-    font-size: 13px;
-    left: 6vw;
-    font-family: "SFProDisplay-Regular";
-  }
-  .subscriptionTitle--lang--en {
-    position: absolute;
-    top: 2.5vh;
-    width: 16vh;
-    text-align: center;
-    font-style: 13px;
-  }
-}
-
-@media (min-width: 414px) {
-  .banner__background {
-    height: 100%;
-  }
-  .banner-header {
-    padding: 25px 20px 0;
-  }
-  .title {
-    font-size: 30px;
+  .banner-body__items {
+    padding-left: 5vw;
   }
   .banner-body__item__description {
     font-size: 15px;
@@ -819,303 +1252,32 @@ html[lang="zh"] .banner-body__title {
   .banner-body__subscription {
     margin-top: 30px;
   }
-  .subscriptionTitle--lang--zh,
-  .subscriptionTitle--lang--ja {
+  .subscriptionTitle {
     position: absolute;
-    top: 3vh;
-    left: 13vw;
-    font-size: 13px;
-  }
-  .subscriptionPrice--lang--zh {
-    position: absolute;
-    top: 8vh;
-    font-size: 10px;
-    left: 8vw;
-  }
-  .subscriptionInfo--lang--zh,
-  .subscriptionInfo--lang--ja {
-    position: absolute;
-    top: 12vh;
-    font-size: 13px;
-    left: -0.3vw;
-    width: 32vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionSecondPrice--lang--zh,
-  .subscriptionSecondPrice--lang--ja {
-    position: absolute;
-    top: 15.5vh;
-    font-size: 11px;
-    left: 9vw;
-    font-family: "SFProDisplay-Regular";
-  }
-
-  .subscriptionTitle--lang--es {
+    top: 2.5vh;
+    width: 100%;
     font-size: 14px;
-    left: 9px;
-  }
-  .subscriptionTitle--lang--nl {
-    font-size: 13px;
-    left: 11px;
-  }
-  .subscriptionPrice--lang--nl,
-  .subscriptionPrice--lang--en,
-  .subscriptionPrice--lang--es {
-    position: absolute;
-    top: 6vh;
-    font-size: 12px;
-    left: 10vw;
-  }
-  .subscriptionInfo--lang--en,
-  .subscriptionInfo--lang--es {
-    position: absolute;
-    top: 11vh;
-    font-size: 13px;
-    left: -0.3vw;
-    width: 32vw;
     text-align: center;
-    background-color: #495795;
   }
-  .subscriptionInfo--lang--nl {
-    position: absolute;
-    top: 11vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 32vw;
-    text-align: center;
-    background-color: #495795;
-  }
-
-  .subscriptionTitle--lang--ru {
-    position: absolute;
-    top: 3vh;
-    left: 11vw;
-    font-size: 13px;
-  }
-
-  .subscriptionPrice--lang--ja {
+  .subscriptionPrice {
     position: absolute;
     top: 7vh;
     font-size: 12px;
     left: 12vw;
   }
-
-  .subscriptionPrice--lang--ru {
+  .subscriptionInfo {
     position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 10vw;
-  }
-
-  .subscriptionInfo--lang--ru {
-    position: absolute;
-    top: 12vh;
+    top: 13vh;
     font-size: 11px;
     left: -0.3vw;
-    width: 32vw;
+    width: 34vw;
     text-align: center;
     background-color: #495795;
   }
-  .subscriptionSecondPrice--lang--ru,
-  .subscriptionSecondPrice--lang--en,
-  .subscriptionSecondPrice--lang--fr,
-  .subscriptionSecondPrice--lang--nl {
+  .subscriptionSecondPrice {
     position: absolute;
     top: 16.5vh;
     font-size: 11px;
-    left: 7vw;
-    font-family: "SFProDisplay-Regular";
-  }
-
-  .subscriptionTitle--lang--fr {
-    position: absolute;
-    top: 3.5vh;
-    width: 15vh;
-    left: 9px;
-    font-size: 13px;
-    text-align: center;
-  }
-  .subscriptionPrice--lang--fr {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
     left: 10vw;
-  }
-  .subscriptionInfo--lang--fr {
-    position: absolute;
-    top: 12vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 32vw;
-    text-align: center;
-    background-color: #495795;
-  }
-
-  .subscriptionSecondPrice--lang--es {
-    position: absolute;
-    top: 15.5vh;
-    font-size: 13px;
-    left: 6vw;
-    font-family: "SFProDisplay-Regular";
-  }
-  .subscriptionTitle--lang--en {
-    position: absolute;
-    top: 2.5vh;
-    width: 16vh;
-    text-align: center;
-    left: 9px;
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 375px) {
-  .subscriptionTitle--lang--zh,
-  .subscriptionTitle--lang--ja {
-    position: absolute;
-    top: 3vh;
-    left: 13vw;
-    font-size: 13px;
-  }
-  .subscriptionPrice--lang--zh {
-    position: absolute;
-    top: 8vh;
-    font-size: 10px;
-    left: 8vw;
-  }
-  .subscriptionInfo--lang--zh,
-  .subscriptionInfo--lang--ja {
-    position: absolute;
-    top: 12vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionSecondPrice--lang--zh,
-  .subscriptionSecondPrice--lang--ja {
-    position: absolute;
-    top: 15.5vh;
-    font-size: 11px;
-    left: 9vw;
-    font-family: "SFProDisplay-Regular";
-  }
-
-  .subscriptionTitle--lang--es {
-    font-size: 14px;
-    left: 7px;
-  }
-  .subscriptionTitle--lang--nl {
-    font-size: 13px;
-    left: 6px;
-  }
-  .subscriptionPrice--lang--nl,
-  .subscriptionPrice--lang--en,
-  .subscriptionPrice--lang--es {
-    position: absolute;
-    top: 6vh;
-    font-size: 12px;
-    left: 10vw;
-  }
-  .subscriptionInfo--lang--en,
-  .subscriptionInfo--lang--es {
-    position: absolute;
-    top: 11vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionInfo--lang--nl {
-    position: absolute;
-    top: 11vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-
-  .subscriptionTitle--lang--ru {
-    position: absolute;
-    top: 3vh;
-    left: 11vw;
-    font-size: 13px;
-  }
-
-  .subscriptionPrice--lang--ja {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 12vw;
-  }
-
-  .subscriptionPrice--lang--ru {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 10vw;
-  }
-
-  .subscriptionInfo--lang--ru {
-    position: absolute;
-    top: 12vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-  .subscriptionSecondPrice--lang--ru,
-  .subscriptionSecondPrice--lang--en,
-  .subscriptionSecondPrice--lang--fr,
-  .subscriptionSecondPrice--lang--nl {
-    position: absolute;
-    top: 16.5vh;
-    font-size: 11px;
-    left: 7vw;
-    font-family: "SFProDisplay-Regular";
-  }
-
-  .subscriptionTitle--lang--fr {
-    position: absolute;
-    top: 3.8vh;
-    width: 15vh;
-    left: 5px;
-    font-size: 13px;
-    text-align: center;
-  }
-  .subscriptionPrice--lang--fr {
-    position: absolute;
-    top: 7vh;
-    font-size: 12px;
-    left: 11vw;
-  }
-  .subscriptionInfo--lang--fr {
-    position: absolute;
-    top: 12vh;
-    font-size: 11px;
-    left: -0.3vw;
-    width: 35vw;
-    text-align: center;
-    background-color: #495795;
-  }
-
-  .subscriptionSecondPrice--lang--es {
-    position: absolute;
-    top: 15.5vh;
-    font-size: 13px;
-    left: 7vw;
-    font-family: "SFProDisplay-Regular";
-  }
-  .subscriptionTitle--lang--en {
-    position: absolute;
-    top: 2.5vh;
-    width: 16vh;
-    text-align: center;
-    left: 3px;
-    font-size: 13px;
   }
 }
