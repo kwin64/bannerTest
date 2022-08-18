@@ -3,6 +3,9 @@ export function dataParseBody(data) {
     const monthlyStyle = document.getElementById("monthlyStyle");
     const annualyStyle = document.getElementById("annualyStyle");
     const btnContinueHandler = document.getElementById("btnContinueHandler");
+    const windowSize = document.getElementById("windowSize");
+    let currentWidthWindow = document.documentElement.clientWidth;
+    let currentHeightWindow = document.documentElement.clientHeight;
     let link;
 
     monthlyStyle.addEventListener("click", () => {
@@ -30,10 +33,19 @@ export function dataParseBody(data) {
     btnContinueHandler.addEventListener("click", () => {
       document.location.href = link;
     });
+
+    function displayWindowSize() {
+      let size = currentWidthWindow * 0.08;
+      console.log((windowSize.style.fontSize = `${size}px`));
+    }
+
+    window.addEventListener("resize", displayWindowSize);
+
+    displayWindowSize();
   });
 
   let html = (document.getElementById("htmlBody").innerHTML = `
-    <div class="banner__body banner-body">
+    <div id='windowSize' class="banner__body banner-body">
         <div class="banner-body__content">
             <div class="banner-body__title">
                 <span class="title">
