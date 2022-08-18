@@ -287,6 +287,8 @@ body {
 .banner-body__items {
   margin-top: 30px;
   text-align: center;
+  letter-spacing: -0.321111px;
+
 }
 .banner-body__item {
   display: flex;
@@ -372,7 +374,7 @@ body {
   background: linear-gradient(270deg, #1987ff 0%, #19ccff 100%);
   border-radius: 30px;
   width: 70vw;
-  height: 5.5vh;
+  height: 6.5vh;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -395,7 +397,7 @@ body {
 
 .banner-footer {
   text-align: center;
-  margin-top: 0.5vh;
+  margin-top: 1.5vh;
 }
 
 .banner-footer_notification {
