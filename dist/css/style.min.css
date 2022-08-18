@@ -446,7 +446,7 @@ html[lang="en"] .subscriptionTitle {
 html[lang="en"] .subscriptionPrice {
   position: absolute;
   top: 6vh;
-  font-size: 18px;
+  font-size: 17px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -454,7 +454,7 @@ html[lang="en"] .subscriptionPrice {
 html[lang="en"] .subscriptionInfo {
   position: absolute;
   top: 12vh;
-  font-size: 15px;
+  font-size: 14px;
   left: -0.3vw;
   width: 34vw;
   text-align: center;
@@ -492,7 +492,7 @@ html[lang="es"] .subscriptionTitle {
 html[lang="es"] .subscriptionPrice {
   position: absolute;
   top: 6vh;
-  font-size: 18px;
+  font-size: 17px;
   width: 100%;
   left: 0;
   text-align: center;
@@ -500,7 +500,7 @@ html[lang="es"] .subscriptionPrice {
 html[lang="es"] .subscriptionInfo {
   position: absolute;
   top: 12vh;
-  font-size: 15px;
+  font-size: 14px;
   left: -0.3vw;
   width: 34vw;
   text-align: center;
@@ -540,14 +540,14 @@ html[lang="fr"] .subscriptionTitle {
 html[lang="fr"] .subscriptionPrice {
   position: absolute;
   top: 7vh;
-  font-size: 20px;
+  font-size: 16px;
   width: 100%;
   left: 0;
   text-align: center;
 }
 html[lang="fr"] .subscriptionInfo {
   position: absolute;
-  top: 13vh;
+  top: 12vh;
   font-size: 12px;
   left: -0.3vw;
   width: 34vw;
@@ -633,7 +633,7 @@ html[lang="nl"] .subscriptionTitle {
 html[lang="nl"] .subscriptionPrice {
   position: absolute;
   top: 6vh;
-  font-size: 18px;
+  font-size: 17px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -681,7 +681,7 @@ html[lang="ru"] .subscriptionTitle {
 html[lang="ru"] .subscriptionPrice {
   position: absolute;
   top: 6vh;
-  font-size: 18px;
+  font-size: 17px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -1215,6 +1215,7 @@ html[lang="zh"] .subscriptionSecondPrice {
   html[lang="es"] .subscriptionInfo {
     width: 35vw;
   }
+
   html[lang="fr"] .subscriptionInfo {
     top: 14vh;
     width: 35vw;
@@ -1271,8 +1272,32 @@ html[lang="zh"] .subscriptionSecondPrice {
     position: absolute;
     top: 15.5vh;
   }
+
+  html[lang="en"] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang="es"] .subscriptionInfo {
+    width: 34vw;
+  }
+
+  html[lang="fr"] .subscriptionInfo {
+    top: 14vh;
+    width: 34vw;
+  }
   html[lang="fr"] .subscriptionPrice {
     position: absolute;
-    top: 6.5vh;
+  }
+
+  html[lang="ja"] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang="nl"] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang="ru"] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang="zh"] .subscriptionInfo {
+    width: 34vw;
   }
 }
