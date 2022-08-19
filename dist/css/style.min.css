@@ -801,6 +801,10 @@ html[lang="zh"] .subscriptionSecondPrice {
   font-family: SF-Pro-Display-Regular;
 }
 
+.fontInfoPrice{
+  font-size: 14px;
+}
+
 @media (min-width: 412px) {
   .banner__background {
     height: 100%;

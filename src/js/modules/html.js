@@ -4,8 +4,6 @@ export function dataParseBody(data) {
     const annualyStyle = document.getElementById("annualyStyle");
     const btnContinueHandler = document.getElementById("btnContinueHandler");
     const windowSize = document.getElementById("windowSize");
-    let currentWidthWindow = document.documentElement.clientWidth;
-    let currentHeightWindow = document.documentElement.clientHeight;
     let link;
 
     monthlyStyle.addEventListener("click", () => {
@@ -35,8 +33,9 @@ export function dataParseBody(data) {
     });
 
     function displayWindowSize() {
+      let currentWidthWindow = document.documentElement.clientWidth;
       let size = currentWidthWindow * 0.08;
-      console.log((windowSize.style.fontSize = `${size}px`));
+      windowSize.style.fontSize = `${size}px`;
     }
 
     window.addEventListener("resize", displayWindowSize);
@@ -88,10 +87,12 @@ export function dataParseBody(data) {
                 ${data["Monthly"]}
             </span>
             <span class='subscriptionPrice'>
-                ${data[`<strong>{{price}}</strong><br>per month`].replace(
-                  "{{price}}",
-                  "$9.99"
-                )}
+                ${data[`<strong>{{price}}</strong><br>per month`]
+                  .replace(`{{price}}`, `$9.99`)
+                  .replace(
+                    `per month`,
+                    `<div class='fontInfoPrice'>per month</div>`
+                  )}
             </span>
             <div class='subscriptionInfo'>
                 ${data[`3 DAYS FREE`]}
@@ -111,10 +112,12 @@ export function dataParseBody(data) {
                 ${data["Annually"]}
             </span>
             <span class='subscriptionPrice'>
-                ${data[`<strong>{{price}}</strong><br>per year`].replace(
-                  "{{price}}",
-                  "$19.99"
-                )}
+                ${data[`<strong>{{price}}</strong><br>per year`]
+                  .replace(`{{price}}`, `$19.99`)
+                  .replace(
+                    `per month`,
+                    `<div class='fontInfoPrice'>per year</div>`
+                  )}
             </span>
             <div class='subscriptionInfo'>
                 ${data[`MOST POPULAR`]}
