@@ -115,7 +115,7 @@ export function dataParseBody(data) {
                 ${data[`<strong>{{price}}</strong><br>per year`]
                   .replace(`{{price}}`, `$19.99`)
                   .replace(
-                    `per month`,
+                    `per year`,
                     `<div class='fontInfoPrice'>per year</div>`
                   )}
             </span>
