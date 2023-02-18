@@ -8,3 +8,6 @@
 Динамическое изменение размеров шрифта
 
 Технологии: HTML5, CSS3, нативный JavaScript, Gulp.
+
+
+https://starlit-duckanoo-65b44f.netlify.app
